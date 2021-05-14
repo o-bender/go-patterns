@@ -2,17 +2,17 @@ package main
 
 import (
 	"fmt"
-	"github.com/py-patterns/singleton"
+	"github.com/o-bender/go-patterns/singleton/singleton"
 )
 
 func main() {
-	fmt.Println(GetSingleton())
+	fmt.Println(singleton.GetSingleton())
 
-	signle := NewSingleton("redis://localhost")
+	signle := singleton.NewSingleton("redis://localhost")
 	fmt.Println(signle)
-	fmt.Println(GetSingleton())
+	fmt.Println(singleton.GetSingleton())
 
-	ResetSingleton()
+	singleton.ResetSingleton()
 
-	fmt.Println(GetSingleton())
+	fmt.Println(singleton.GetSingleton())
 }
